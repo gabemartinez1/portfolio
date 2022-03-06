@@ -1,0 +1,581 @@
+:root {
+    --primary: #262626;
+    --background: white;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --shadow-emphasis: rgba(0, 0, 0, 0.35);
+}
+
+
+/***** GLOBAL FOR ALL PAGES  ***/
+
+body {
+    font-family: "Karla", sans-serif;
+    padding: 80px 30px 0;
+    color: var(--primary);
+    line-height: 1.4;
+}
+
+a {
+    font-family: "Karla", sans-serif;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.17em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.nav-up {
+    top: -80px;
+}
+
+header h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 38px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    /*fix formatting from fixed position header*/
+    padding-right: 38px;
+}
+
+header nav a {
+    /*font-family: "Karla", sans-serif;*/
+    font-size: 1em;
+    /*color: var(--primary);
+    text-decoration: none;*/
+    margin-right: 1em;
+}
+
+header nav .selected {
+    border-bottom: 1px solid var(--primary);
+}
+
+nav a {
+    transition: opacity .3s;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+nav:hover a {
+    opacity: .33;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5em;
+    padding-top: 1em;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer nav a,
+footer nav p {
+    margin-right: 1em;
+    font-size: 1.5em;
+}
+
+
+/**** HOME PAGE / WORK PAGE ****/
+
+.intro {
+    margin: 100px auto 100px auto;
+    max-width: 680px;
+}
+
+.intro h1 {
+    font-weight: 400;
+}
+
+.works {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+}
+
+.work p {
+    font-size: 1.17em;
+    font-weight: 400;
+    max-width: 500px;
+}
+
+.works h3 {
+    font-weight: 400;
+    margin: 0;
+}
+
+.work h2 {
+    margin-bottom: 2px;
+    ;
+}
+
+.worksgrid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.work {
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+.work img {
+    width: 390px;
+    height: 234px;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    transition: all .3s;
+}
+
+.work .insta,
+.work .brand {
+    object-position: 50% 50%;
+}
+
+.work .images {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.work .images img {
+    height: 234px;
+    width: auto;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.btn {
+    font-size: 1em;
+    color: var(--primary);
+    margin-right: 12px;
+    padding: 4px 8px;
+    border: 1px solid var(--background);
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.work:hover .btn {
+    /*border-bottom: 1px solid var(--primary);*/
+    border: 1px solid var(--primary);
+    transition: all .3s;
+}
+
+.work:hover img {
+    box-shadow: 0 4px 8px 0 var(--shadow-emphasis);
+}
+
+.btn:hover {
+    color: var(--background);
+    background-color: var(--primary);
+    /*opacity: .33;*/
+}
+
+
+/*******ABOUT PAGE*****/
+
+.container {
+    margin: 0 auto;
+    max-width: 680px;
+}
+
+.intro {
+    margin-top: 100px;
+}
+
+.headshot {
+    padding-top: 300px;
+    background-color: rgba(38, 38, 38, .2);
+    background-image: url("assets/headshot.jpeg");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 var(--shadow);
+}
+
+.testimonial {
+    margin-top: 20px;
+}
+
+.testimonial:last-child {
+    margin-top: 40px;
+}
+
+.testimonial blockquote {
+    margin-left: 0;
+    padding-left: 1em;
+    border-left: 0.2em solid;
+    font-size: 1.17em;
+    max-width: 100%;
+}
+
+.testimonial blockquote::before,
+.testimonial blockquote::after {
+    content: '"';
+    font-weight: 700;
+}
+
+.person strong {
+    margin-right: 4px;
+}
+
+.person {
+    padding-left: 1.2em;
+}
+
+.person h2 {
+    margin-bottom: 0;
+}
+
+.person h3 {
+    margin-top: 10px;
+}
+
+.intro h2,
+.person h2,
+.person h3,
+.testimonials h2 {
+    font-weight: 400;
+}
+
+.bio {
+    margin-bottom: 40px;
+}
+
+#bio p {
+    font-size: 1.5em;
+}
+
+
+/***** CASE STUDY PAGES *****/
+
+
+/*this is taken care of from about page
+.container {
+    margin: 0 auto;
+    max-width: 680px;
+}*/
+
+.title {
+    margin-top: 100px;
+}
+
+.title h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+.container p {
+    font-size: 1.17em;
+}
+
+.hero {
+    background-image: url("assets/curb/hero.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.raiden-hero {
+    margin-top: 50px;
+    background-image: url("assets/raiden/hero.png");
+    height: 350px;
+}
+
+.container .heading,
+.container .sub-head {
+    font-weight: 700;
+}
+
+.container .heading {
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+.user-stories {
+    display: flex;
+    justify-content: space-between;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 1em;
+    border-left: 0.2em solid;
+    max-width: 200px;
+}
+
+.adjectives blockquote {
+    line-height: 2;
+}
+
+blockquote:last-child {
+    margin-right: 0;
+}
+
+blockquote::before,
+blockquote::after {
+    content: '"';
+    font-weight: 700;
+}
+
+.adjectives blockquote::before,
+.adjectives blockquote::after {
+    content: none;
+}
+
+.screens img {
+    max-width: 200px;
+    margin-right: 12px;
+}
+
+.screens img:last-child {
+    margin-right: 0;
+}
+
+.screens {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    /*avoid height stretch in safari*/
+    align-items: flex-start;
+}
+
+.screens img {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 var(--shadow);
+}
+
+.paper {
+    flex-wrap: wrap;
+}
+
+.paper img {
+    margin-bottom: 20px;
+}
+
+.paper img:nth-child(3),
+.paper img:nth-child(6),
+.brand-inspo img:nth-child(3) {
+    margin-right: 0;
+}
+
+.raiden-inspo div {
+    /*max-width: 640px;
+    margin-right: 0;*/
+    width: 47%;
+    margin-right: 20px;
+    height: 200px;
+    border-radius: 5px;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    margin-bottom: 20px;
+}
+
+.raiden-inspo .row1-1 {
+    background-image: url(assets/raiden/inspo/inspo-1.png);
+    background-size: contain;
+}
+
+.raiden-inspo .row1-2 {
+    background-image: url(assets/raiden/inspo/inspo-2.png);
+}
+
+.raiden-inspo .row2-1 {
+    background-image: url(assets/raiden/inspo/inspo-3.png);
+}
+
+.raiden-inspo .row2-2 {
+    background-image: url(assets/raiden/inspo/inspo-4.png);
+}
+
+.raiden-screens img {
+    max-width: 100%;
+    height: auto;
+}
+
+video,
+.iteration-2-screen,
+iframe {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 var(--shadow);
+}
+
+.iteration-2-screen {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.insta-hero {
+    background-image: url("assets/instagram/insta-hero.png");
+}
+
+.text-link {
+    font-size: inherit;
+    text-decoration: underline;
+}
+
+.insta-drawn img {
+    max-width: 320px;
+}
+
+.brand-hero {
+    background-image: url("assets/branding/mockups.png");
+}
+
+.brand-inspo {
+    flex-wrap: wrap;
+}
+
+.brand-inspo img {
+    margin-bottom: 20px;
+}
+
+.next-link {
+    margin-top: 40px;
+}
+
+.next {
+    border: 1px solid var(--primary);
+}
+
+.synchrony-hero {
+    background-image: url("assets/synchrony/mockup.png");
+}
+
+.pain-points blockquote,
+.metrics blockquote {
+    max-width: 100%;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:500px) {
+    .body {
+        padding: 40px 12px 0;
+    }
+    header {
+        display: block;
+        padding-bottom: 8px;
+    }
+    header nav {
+        justify-content: left;
+        padding-right: 0;
+        padding-left: 38px;
+    }
+    .nav-up {
+        top: -108px;
+    }
+    footer {
+        display: block;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    footer nav p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .intro {
+        margin: 40px auto 40px auto;
+    }
+    .intro h1,
+    .title h1 {
+        font-size: 1.5em;
+    }
+    .work {
+        width: auto;
+    }
+    .btn {
+        border: 1px solid var(--primary);
+    }
+    .btn:active {
+        color: var(--background);
+        background-color: var(--primary);
+    }
+    .work img {
+        width: 300px;
+    }
+    .container {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .title {
+        margin-top: 40px;
+    }
+    .testimonial blockquote {
+        font-size: 1em;
+    }
+    .person h2,
+    .person h3 {
+        font-size: 1.17em;
+    }
+    .person:last-child {
+        margin-bottom: 40px;
+    }
+    .screens {
+        display: block;
+    }
+    .screens img {
+        margin-bottom: 20px;
+    }
+    .raiden-inspo div {
+        width: auto;
+    }
+    .user-stories {
+        display: block;
+    }
+    iframe {
+        width: 300px;
+        height: 169px;
+    }
+    .long {
+        margin-right: 0;
+        font-size: .85em;
+    }
+    .insta-drawn img {
+        max-width: 300px;
+    }
+}
